@@ -1,0 +1,11 @@
+version: '3'
+services:
+  api:
+    image: spring-boot-docker-compose
+    ports:
+      - "8080:8080"
+    environment:
+      JAVA_OPTS: "-Xmx512m -Xms512m"
+  redis:
+    image: redis:latest
+    hostname: redis
